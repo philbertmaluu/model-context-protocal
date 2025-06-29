@@ -1,0 +1,17 @@
+# ERP API Configuration
+ERP_API_BASE_URL=http://localhost:8000/api
+ERP_AUTH_ENDPOINT=/auth/login
+ERP_DEFAULT_EMAIL=your-email@example.com
+ERP_DEFAULT_PASSWORD=your-password
+
+# API Settings
+ERP_API_TIMEOUT=30
+ERP_MAX_RETRIES=3
+
+# Cache Settings (optional)
+ERP_CACHE_ENABLED=false
+ERP_CACHE_TTL=300
+ERP_CACHE_MAX_SIZE=1000
+
+# Anthropic API Key (for MCP client)
+ANTHROPIC_API_KEY=your-anthropic-api-key-here 

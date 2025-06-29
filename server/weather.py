@@ -1,5 +1,6 @@
 from typing import  Any
 import httpx
+import asyncio
 from mcp.server.fastmcp import FastMCP
 
 
@@ -30,7 +31,7 @@ async def make_nws_request(endpoint: str) -> dict[str, Any] | None:
 
 
 
-def format_alert(feature: dist) -> str:
+def format_alert(feature: dict) -> str:
     """Format an alert feature"""
     props = feature["properties"]
     return f"""
@@ -64,3 +65,7 @@ async def get_alerts(state: str) -> str:
         return "No alerts found for the given state"
 
     return "\n\n".join(alerts)
+
+
+if __name__ == "__main__":
+    asyncio.run(server.run())
